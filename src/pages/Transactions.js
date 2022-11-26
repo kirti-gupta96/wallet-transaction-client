@@ -117,7 +117,7 @@ function Transactions(props) {
                         <p ><strong>Wallet Id:</strong> {walletId}</p>
                         <p><strong>Name:</strong> {walletDetails.name}</p>
                         <p><strong>Balance: </strong>&#x20b9;{walletDetails.balance}</p>
-                        <p><u><a href={`/transactions?walletId=${walletId}`}>View Transaction List</a></u></p>
+                        <p><u><a href={`https://main--wallet-transactions-app.netlify.app/transactions?walletId=${walletId}`}>View Transaction List</a></u></p>
                     </div>}
                 <div className="setup-form">
                     <Form className="form">
