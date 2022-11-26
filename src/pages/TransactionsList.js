@@ -22,7 +22,7 @@ function TransactionsList(props) {
     }, [sort]);
 
     useEffect(() => {
-        if(newWalletClicked) {
+        if (newWalletClicked) {
             navigate('/');
         }
     })
@@ -35,6 +35,9 @@ function TransactionsList(props) {
             let sortValue = sort[sortKey];
             const options = {
                 method: "GET",
+                headers: {
+                    "Access-Control-Allow-Origin": "*"
+                },
                 url: `https://wallet-transaction-app.herokuapp.com/transactions?walletId=${walletId}&skip=${skip}&limit=${limit}&page=${page}&sortKey=${sortKey}&sortValue=${sortValue}`
             }
             const res = await axios(options);

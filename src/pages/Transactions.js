@@ -27,6 +27,9 @@ function Transactions(props) {
             setError('');
             const options = {
                 method: "GET",
+                headers: {
+                    "Access-Control-Allow-Origin": "*"
+                },
                 url: `https://wallet-transaction-app.herokuapp.com/wallet/${walletId}`
             }
 
@@ -72,6 +75,9 @@ function Transactions(props) {
                 let options = {
                     method: "POST",
                     url: `https://wallet-transaction-app.herokuapp.com/transact/${walletId}`,
+                    headers: {
+                        "Access-Control-Allow-Origin": "*"
+                    },
                     data: {
                         amount: transactionType === 'credit' ? `${amount}` : `-${amount}`,
                         description

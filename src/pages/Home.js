@@ -31,6 +31,9 @@ function Home(props) {
                 const options = {
                     method: "POST",
                     url: "https://wallet-transaction-app.herokuapp.com/setup",
+                    headers: {
+                        "Access-Control-Allow-Origin": "*"
+                    },
                     data: {
                         name: userName,
                         balance
