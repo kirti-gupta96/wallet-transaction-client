@@ -27,7 +27,7 @@ function Transactions(props) {
             setError('');
             const options = {
                 method: "GET",
-                url: `/wallet/${walletId}`
+                url: `https://wallet-transaction-app.herokuapp.com/wallet/${walletId}`
             }
 
             setLoading(true);
@@ -71,7 +71,7 @@ function Transactions(props) {
             if (amount && transactionType && description) {
                 let options = {
                     method: "POST",
-                    url: `/transact/${walletId}`,
+                    url: `https://wallet-transaction-app.herokuapp.com/transact/${walletId}`,
                     data: {
                         amount: transactionType === 'credit' ? `${amount}` : `-${amount}`,
                         description
