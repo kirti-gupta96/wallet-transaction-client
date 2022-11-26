@@ -30,7 +30,7 @@ function Home(props) {
             if (userName && balance) {
                 const options = {
                     method: "POST",
-                    url: "/setup",
+                    url: "https://wallet-transaction-app.herokuapp.com/setup",
                     data: {
                         name: userName,
                         balance
