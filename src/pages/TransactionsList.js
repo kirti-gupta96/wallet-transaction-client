@@ -35,7 +35,7 @@ function TransactionsList(props) {
             let sortValue = sort[sortKey];
             const options = {
                 method: "GET",
-                url: `/transactions?walletId=${walletId}&skip=${skip}&limit=${limit}&page=${page}&sortKey=${sortKey}&sortValue=${sortValue}`
+                url: `https://wallet-transaction-app.herokuapp.com/transactions?walletId=${walletId}&skip=${skip}&limit=${limit}&page=${page}&sortKey=${sortKey}&sortValue=${sortValue}`
             }
             const res = await axios(options);
             setTotalPages(res.data.totalPages);
